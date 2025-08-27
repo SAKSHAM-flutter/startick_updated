@@ -3,7 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
+
 import 'package:startick/data/remote/model/txn_dto.dart';
 import 'package:startick/data/remote/repo/ticket_repo.dart';
 import 'package:startick/ui/utils/base_class/view_model.dart';

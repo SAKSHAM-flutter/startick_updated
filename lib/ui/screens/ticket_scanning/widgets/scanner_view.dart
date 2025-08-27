@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:provider/provider.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:qr_code_scanner_plus/qr_code_scanner_plus.dart';
 import 'package:startick/data/local/shared_pref.dart';
 import 'package:startick/data/remote/repo/auth_repo.dart';
 import 'package:startick/ui/screens/auth/login.dart';
