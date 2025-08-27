@@ -35,12 +35,11 @@ jobs:
           today=$(date +"%d-%m")
           mv build/app/outputs/flutter-apk/app-release.apk "Scaneo($today).apk"
 
-      - name: Send APK to Telegram with random caption
+      - name: 📤 Send APK to Telegram and show status
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          # Define fun messages
           messages=(
             "🚀 Another awesome build just landed!"
             "🔥 Fresh APK, hot off the CI oven!"
@@ -54,15 +53,30 @@ jobs:
             "🎯 Hit the target with this new build!"
           )
 
-          # Pick a random message
           size=${#messages[@]}
           index=$(( RANDOM % size ))
           caption="${messages[$index]}"
-
           APK_PATH="Scaneo($(date +"%d-%m")).apk"
-          echo "Sending APK with caption: $caption"
 
-          curl -F chat_id=$TELEGRAM_CHAT_ID \
+          echo "📦 Attempting to send $APK_PATH to Telegram..."
+
+          RESPONSE=$(curl --write-out "%{http_code}" \
+               --silent \
+               --output telegram_response.log \
+               -F chat_id=$TELEGRAM_CHAT_ID \
                -F document=@"$APK_PATH" \
                -F caption="$caption" \
-               https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument
+               https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument)
+
+          echo "ℹ️ Telegram response code: $RESPONSE"
+
+          if [[ "$RESPONSE" -eq 200 ]]; then
+            echo "✅ APK successfully uploaded to Telegram."
+          elif [[ "$RESPONSE" -eq 504 ]]; then
+            echo "⚠️ Telegram responded with 504 Gateway Timeout, but the file may still be delivered. Check Telegram manually."
+          else
+            echo "❌ Failed to upload APK to Telegram. HTTP code: $RESPONSE"
+            echo "Details:"
+            cat telegram_response.log
+            exit 1
+          fi
