@@ -6,7 +6,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/data/remote/network_connection.dart';
-import 'package:startick/ui/utils/toasts.dart';
 
 ///Base Class for encapsulating logic related to Loading Status management, and error handling
 ///Use of this class is helpful while using classes such as

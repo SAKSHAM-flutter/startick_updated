@@ -1,12 +1,6 @@
-import 'package:cool_dropdown/cool_dropdown.dart';
-import 'package:cool_dropdown/models/cool_dropdown_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/ui/screens/auth/auth_viewmodel.dart';
-import 'package:startick/ui/screens/auth/forget_password.dart';
-import 'package:startick/ui/themes/colors.dart';
-import 'package:startick/ui/themes/typography.dart';
-import 'package:startick/ui/utils/base_class/navigation.dart';
 import 'package:startick/ui/utils/widgets/common_button.dart';
 import 'package:startick/ui/utils/widgets/common_text_field.dart';
 
@@ -20,15 +14,8 @@ class LoginCardWidget extends StatefulWidget {
 }
 
 class _LoginCardWidgetState extends State<LoginCardWidget> {
-  final DropdownController<String> _controller = DropdownController(
-    duration: const Duration(milliseconds: 300),
-  );
-
   @override
   Widget build(BuildContext context) {
-    final boxDecoration = BoxDecoration(
-      border: Border.all(color: Colors.transparent),
-    );
     final provider = context.read<AuthViewModel>();
     return Card(
       elevation: 5,

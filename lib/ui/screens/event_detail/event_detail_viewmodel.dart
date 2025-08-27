@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:startick/data/remote/model/event_dto.dart';
 import 'package:startick/data/remote/model/event_states_dto.dart';

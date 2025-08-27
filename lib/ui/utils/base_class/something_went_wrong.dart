@@ -50,8 +50,9 @@ class SomethingWrong extends StatelessWidget {
                   }
                 },
                 style: ButtonStyle(
-                  elevation: WidgetStatePropertyAll(0),
-                  backgroundColor: WidgetStatePropertyAll(AppColors.appColor),
+                  elevation: const WidgetStatePropertyAll(0),
+                  backgroundColor:
+                      const WidgetStatePropertyAll(AppColors.appColor),
                   fixedSize: WidgetStatePropertyAll(
                     Size(width, 45),
                   ),

@@ -18,7 +18,7 @@ class AppColors {
   static const Color colorD4F = Color(0xFF011D4F);
   static const Color greyHint = Color(0xFFB1B1B1);
   static const Color greyIcon = Color(0xFF909090);
-  static const Color focusColor = Color(0xFF2369AE45);
+  static const Color focusColor = Color(0xff2369AE);
   static const Color blueDAF = Color(0xFFDAEFFF);
   static const Color buttonColor = Color(0xFF2369AE);
   static const Color grey2E = Color(0xFf2E2E2E);

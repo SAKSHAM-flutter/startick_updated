@@ -23,6 +23,7 @@ class _GuestListState extends State<GuestList> {
     int itemView =
         context.select<EventDetailModel, int>((pro) => pro.itemsShowed);
     Size size = MediaQuery.sizeOf(context);
+    // ignore: deprecated_member_use
     Color borderColor = const Color(0xFFD9D9D9).withOpacity(0.2);
     Container vDivider = Container(width: 2, height: 40, color: borderColor);
     Container hDivider =

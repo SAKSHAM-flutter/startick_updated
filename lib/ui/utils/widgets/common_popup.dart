@@ -23,8 +23,8 @@ void showPopUp({
         child: child,
       );
     },
-    pageBuilder: (context, ani1, ani2) => WillPopScope(
-      onWillPop: () async => Future.value(false),
+    pageBuilder: (context, ani1, ani2) => PopScope(
+      onPopInvokedWithResult: (did, result) => false,
       child: SimpleDialog(
         elevation: 0.0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),

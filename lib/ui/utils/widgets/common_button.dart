@@ -26,7 +26,7 @@ class CommonButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: () => onClick?.call(),
       style: ButtonStyle(
-        elevation: WidgetStatePropertyAll(0),
+        elevation: const WidgetStatePropertyAll(0),
         backgroundColor: WidgetStatePropertyAll(buttonColor),
         fixedSize: WidgetStatePropertyAll(
             Size(width ?? MediaQuery.sizeOf(context).width, height)),

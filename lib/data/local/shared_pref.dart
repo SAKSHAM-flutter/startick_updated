@@ -1,5 +1,4 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:startick/data/remote/repo/auth_repo.dart';
 
 ///Singleton class for accessing shared prefs, it contains all the key value fields to be saved in the app
 class Prefs {

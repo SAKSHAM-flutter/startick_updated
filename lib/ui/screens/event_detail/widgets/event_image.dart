@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:startick/ui/utils/widgets/custom_image.dart';
 

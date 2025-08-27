@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/data/remote/model/event_dto.dart';
 import 'package:startick/ui/screens/home/home_viewmodel.dart';
-import 'package:startick/ui/screens/home/widgets/event_seat_row.dart';
-import 'package:startick/ui/screens/home/widgets/title_row.dart';
-import 'package:startick/ui/themes/colors.dart';
-import 'package:startick/ui/themes/typography.dart';
 import 'package:startick/ui/utils/widgets/custom_image.dart';
 
 class EventSlider extends StatelessWidget {

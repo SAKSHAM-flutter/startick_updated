@@ -37,7 +37,6 @@ class _ScannerHomeState extends State<ScannerHome> {
 
   @override
   Widget build(BuildContext context) {
-    print("Check User ${AuthRepo.getUserTypeByRole(Prefs.role.get())}");
     bool isOragnizer = AuthRepo.getUserTypeByRole(Prefs.role.get()) ==
         UserType.metherOrganizer;
     return Selector<SCHomeModel, int>(

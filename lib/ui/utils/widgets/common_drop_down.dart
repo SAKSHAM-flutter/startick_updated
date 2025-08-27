@@ -1,5 +1,4 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:startick/ui/themes/colors.dart';
 import 'package:startick/ui/themes/typography.dart';
@@ -35,7 +34,7 @@ class CommonDropDown<T> extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
-        border:  Border.all(color: AppColors.greyBorder),
+        border: Border.all(color: AppColors.greyBorder),
         // (
         //   left: border,
         //   top: border,
@@ -64,7 +63,9 @@ class CommonDropDown<T> extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Padding(
-                        padding: e=="Organiser"?const EdgeInsets.only(bottom: 5):EdgeInsets.zero,
+                        padding: e == "Organiser"
+                            ? const EdgeInsets.only(bottom: 5)
+                            : EdgeInsets.zero,
                         child: Text(
                           getText.call(e),
                           style: Inter.regular(AppColors.greyText).s18,
@@ -72,7 +73,7 @@ class CommonDropDown<T> extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      if(e=="Organiser")const Divider(height: 1),
+                      if (e == "Organiser") const Divider(height: 1),
                     ],
                   ),
                 ),

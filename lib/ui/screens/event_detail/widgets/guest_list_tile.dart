@@ -12,7 +12,8 @@ class GuestListTile extends StatelessWidget {
   const GuestListTile({
     super.key,
     required this.guestList,
-    required this.viewItems, required this.mode,
+    required this.viewItems,
+    required this.mode,
   });
 
   @override
@@ -20,6 +21,7 @@ class GuestListTile extends StatelessWidget {
     Container vDivider = Container(
       width: 2,
       height: 40,
+      // ignore: deprecated_member_use
       color: const Color(0xFFD9D9D9).withOpacity(0.2),
     );
     return ListView.builder(

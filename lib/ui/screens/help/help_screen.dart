@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:startick/ui/screens/help/widgets/help_button.dart';
 import 'package:startick/ui/screens/widgets/back_button.dart';
-import 'package:startick/ui/themes/colors.dart';
 import 'package:startick/ui/themes/typography.dart';
 import 'package:startick/ui/utils/colors_helpers.dart';
 

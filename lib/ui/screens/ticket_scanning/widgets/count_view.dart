@@ -43,6 +43,7 @@ class CountView extends StatelessWidget {
                         radius: radius,
                         backgroundColor: value == selectedCount
                             ? const Color(0xFFECE227)
+                            // ignore: deprecated_member_use
                             : const Color(0xFF000000).withOpacity(0.6),
                         child: Text(
                           "$value",

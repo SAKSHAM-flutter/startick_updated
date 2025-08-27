@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/ui/screens/home/home_viewmodel.dart';
@@ -25,6 +24,7 @@ class CurrentIndexView extends StatelessWidget {
                 child: CircleAvatar(
                   radius: 5,
                   backgroundColor:
+                      // ignore: deprecated_member_use
                       Colors.white.withOpacity(index == current ? 1 : 0.5),
                 ),
               ),

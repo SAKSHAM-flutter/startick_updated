@@ -54,6 +54,7 @@ class BannerSlider extends StatelessWidget {
                     padding: const EdgeInsets.all(3),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
+                      // ignore: deprecated_member_use
                       color: const Color(0xFF000000).withOpacity(0.5),
                     ),
                     child: Row(
@@ -64,6 +65,7 @@ class BannerSlider extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 3),
                           child: CircleAvatar(
                             radius: 4,
+                            // ignore: deprecated_member_use
                             backgroundColor: Colors.white.withOpacity(
                               index == items.item1 ? 1 : 0.5,
                             ),
@@ -78,6 +80,7 @@ class BannerSlider extends StatelessWidget {
                   left: 35,
                   child: Container(
                     padding: const EdgeInsets.all(3),
+                    // ignore: deprecated_member_use
                     color: const Color(0xFF000000).withOpacity(0.5),
                     child: Text(
                       "Ad",

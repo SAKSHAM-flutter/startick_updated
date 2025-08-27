@@ -96,7 +96,6 @@ class AuthRepo {
   }
 
   static UserType getUserTypeByRole(String role) {
-    print("Role Check $role");
     switch (role.toLowerCase()) {
       case "ticketmania scanner":
         return UserType.scanner;

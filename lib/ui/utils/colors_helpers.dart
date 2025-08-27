@@ -1,11 +1,10 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:startick/ui/themes/colors.dart';
 
 MaterialColor createMaterialColor(Color color) {
   final List strengths = <double>[.05];
   final Map swatch = <int, Color>{};
+  // ignore: deprecated_member_use
   final int r = color.red, g = color.green, b = color.blue;
 
   for (int i = 1; i < 10; i++) {
@@ -20,10 +19,12 @@ MaterialColor createMaterialColor(Color color) {
       1,
     );
   }
+  // ignore: deprecated_member_use
   return MaterialColor(color.value, swatch as dynamic);
 }
 
 String colorToHex(Color color) {
+  // ignore: deprecated_member_use
   return '#${color.value.toRadixString(16).padLeft(8, '0').substring(2)}';
 }
 

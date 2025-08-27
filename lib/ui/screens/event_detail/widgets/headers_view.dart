@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/ui/screens/event_detail/event_detail_viewmodel.dart';
 import 'package:startick/ui/themes/colors.dart';

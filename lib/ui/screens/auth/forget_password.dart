@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/ui/screens/auth/auth_viewmodel.dart';
@@ -20,6 +18,7 @@ class ForgotPassword extends StatefulWidget {
 class _ForgotPasswordState extends State<ForgotPassword> {
   @override
   void initState() {
+    super.initState();
     withViewModel<AuthViewModel>(context, (viewModel) {
       // viewModel.onForgetSuccess = () {
       //   Navigator.pop(context);

@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:http/http.dart' as http;
-import 'package:http_parser/http_parser.dart';
 import 'package:startick/data/local/shared_pref.dart';
 import 'package:startick/data/remote/endpoints.dart';
 import 'package:startick/data/remote/model/response_dto.dart';
@@ -67,7 +66,7 @@ class FileUploadHelper {
       return http.MultipartFile.fromPath(
         multipleFiles.fileFieldName,
         path,
-        contentType: MediaType("image", "jpeg"),
+        // contentType: MediaType("image", "jpeg"),
       );
     });
     final List<http.MultipartFile> files = await Future.wait(fileFutures);

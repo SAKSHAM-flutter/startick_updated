@@ -11,6 +11,7 @@ class Themes {
     cardColor: Colors.white,
     colorScheme: ColorScheme.light(
       primary: AppColors.buttonColor,
+      // ignore: deprecated_member_use
       secondary: AppColors.buttonColor.withOpacity(0.4),
     ),
     visualDensity: VisualDensity.adaptivePlatformDensity,

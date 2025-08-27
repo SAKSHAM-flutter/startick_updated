@@ -41,6 +41,7 @@ class _EventDetailState extends State<EventDetail> {
         builder: (context, eventDto, child) {
           if (eventDto == null) return const SizedBox.shrink();
           return Container(
+            // ignore: deprecated_member_use
             color: const Color(0xFFD9D9D9).withOpacity(0.1),
             height: MediaQuery.sizeOf(context).height,
             width: MediaQuery.sizeOf(context).width,

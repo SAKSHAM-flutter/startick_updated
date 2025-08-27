@@ -16,9 +16,9 @@ DropdownStyleData getDropDownStyleData(double? width) {
       borderRadius: BorderRadius.circular(12),
     ),
     scrollbarTheme: const ScrollbarThemeData(
-      trackVisibility: MaterialStatePropertyAll(false),
-      thumbVisibility: MaterialStatePropertyAll(false),
-      thickness: MaterialStatePropertyAll(0),
+      trackVisibility: WidgetStatePropertyAll(false),
+      thumbVisibility: WidgetStatePropertyAll(false),
+      thickness: WidgetStatePropertyAll(0),
     ),
   );
 }
@@ -41,7 +41,7 @@ MenuItemStyleData menuItemStyleData({double? height}) {
   return MenuItemStyleData(
     padding: EdgeInsets.zero,
     height: height ?? 33,
-    overlayColor: WidgetStatePropertyAll(AppColors.greyText),
+    overlayColor: const WidgetStatePropertyAll(AppColors.greyText),
   );
 }
 
