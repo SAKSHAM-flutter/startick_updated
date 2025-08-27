@@ -1,0 +1,71 @@
+name: Flutter CI (Android Only)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test (Android)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.1'
+          channel: 'stable'
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Analyze Code
+        run: flutter analyze
+
+      - name: Run Tests
+        run: flutter test
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Rename APK
+        run: |
+          today=$(date +"%d-%m")
+          mv build/app/outputs/flutter-apk/app-release.apk "Scaneo($today).apk"
+
+      - name: Send APK to Telegram with random caption
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          # Define fun messages
+          messages=(
+            "🚀 Another awesome build just landed!"
+            "🔥 Fresh APK, hot off the CI oven!"
+            "✨ Time to test the latest and greatest!"
+            "🎉 Build success! Ready for action!"
+            "🚧 Code polished, APK ready to roll!"
+            "💡 New features incoming — enjoy testing!"
+            "🛠️ Built and ready to rock your device!"
+            "⚡ Fasten your seatbelt, here’s the latest!"
+            "🐞 Bugs beware! Here comes a fresh build!"
+            "🎯 Hit the target with this new build!"
+          )
+
+          # Pick a random message
+          size=${#messages[@]}
+          index=$(( RANDOM % size ))
+          caption="${messages[$index]}"
+
+          APK_PATH="Scaneo($(date +"%d-%m")).apk"
+          echo "Sending APK with caption: $caption"
+
+          curl -F chat_id=$TELEGRAM_CHAT_ID \
+               -F document=@"$APK_PATH" \
+               -F caption="$caption" \
+               https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendDocument
