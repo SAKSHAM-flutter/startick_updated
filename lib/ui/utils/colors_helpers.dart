@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:startick/ui/themes/colors.dart';
 
 MaterialColor createMaterialColor(Color color) {
   final List strengths = <double>[.05];
@@ -63,3 +64,12 @@ String padZero(String str, [int len = 2]) {
   var zeros = '0' * (len - str.length);
   return zeros + str;
 }
+
+Gradient get appGradient => const LinearGradient(
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        AppColors.buttonColor,
+        Color(0xFF001739),
+      ],
+    );

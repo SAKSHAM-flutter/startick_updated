@@ -1,30 +1,15 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const Color greenDark = Color(0xff2A6B43);
-  static const Color yellow = Color(0xffFCFBE7);
   static const Color redError = Color(0xffF44343);
-  static const Color orange = Color(0xffE9985D);
   static const Color greenCol = Color(0xff27EC89);
-  static const Color labelColor = Colors.grey;
-  static const Color pinkColor = Colors.pinkAccent;
-  static const Color greenColor = Color(0xFF94B543);
-  static const Color greenToggle = Color(0xFF27AE60);
   static const Color appColor = Color(0xFF582010);
   static const Color whiteEA = Color(0xFFEAEAEA);
   static const Color redColor = Color(0xFFFF5656);
   static const Color redStatusColor = Color(0xFFA60000);
   static const Color greyLight = Color(0xFF1E1E1E);
-  static const Color blueBackground = Color(0xFFEAEAEA);
-  static const Color greyLight1 = Color(0xFFD3D3D3);
-  static const Color greyLight2 = Color(0xFFD9D9D9);
-  static const Color greyLighter = Color(0xFF7D7D7D);
-  static const Color greyDark = Color(0xFFD2D2D2);
   static const Color whiteLight = Color(0xFFF0F0F0);
   static const Color backWhite = Color(0xFFE8E8E8);
-  static const Color zeroColor = Color(0x3F000000);
-
-  static const Color yellowLight = Color(0xFFFF9C00);
 
   //Running AppColor
   static const Color greyBorder = Color(0xFFD6D6D6);
@@ -33,9 +18,9 @@ class AppColors {
   static const Color colorD4F = Color(0xFF011D4F);
   static const Color greyHint = Color(0xFFB1B1B1);
   static const Color greyIcon = Color(0xFF909090);
-  static const Color focusColor = Color(0xFFFFBEF7);
+  static const Color focusColor = Color(0xFF2369AE45);
   static const Color blueDAF = Color(0xFFDAEFFF);
-  static const Color buttonColor = Color(0xFfE02077);
+  static const Color buttonColor = Color(0xFF2369AE);
   static const Color grey2E = Color(0xFf2E2E2E);
   // static const Color blueColor = Color(0xFF43AEFE);
   static const Color yellowHalf = Color(0xFFECE227);

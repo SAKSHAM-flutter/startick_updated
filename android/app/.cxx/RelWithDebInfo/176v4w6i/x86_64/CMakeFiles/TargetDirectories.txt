@@ -1,2 +1,0 @@
-/Users/acare/Development/startick/startick/android/app/.cxx/RelWithDebInfo/176v4w6i/x86_64/CMakeFiles/edit_cache.dir
-/Users/acare/Development/startick/startick/android/app/.cxx/RelWithDebInfo/176v4w6i/x86_64/CMakeFiles/rebuild_cache.dir

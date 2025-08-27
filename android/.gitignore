@@ -1,13 +1,82 @@
-gradle-wrapper.jar
-/.gradle
-/captures/
-/gradlew
-/gradlew.bat
-/local.properties
-GeneratedPluginRegistrant.java
+# Gradle files
+.gradle/
+build/
+*/build/
+!gradle/wrapper/gradle-wrapper.jar
 
-# Remember to never publicly share your keystore.
-# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+# Local configuration files
+local.properties
 key.properties
+
+# Keystore files
 **/*.keystore
 **/*.jks
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code settings
+.vscode/
+
+# Generated files
+captures/
+output.json
+GeneratedPluginRegistrant.java
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Flutter/Dart/Pub
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+*.ninja
+
+# Gradle wrapper
+gradlew
+gradlew.bat
+gradle-wrapper.jar
+
+# Crashlytics/Firebase
+crashlytics-build.properties
+
+# Misc
+*.log
+*.tmp
+
+# Backup and swap files
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Patch files
+*.patch
+*.diff
+
+# System files
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Desktop.ini
+
+# Test result files
+*.testresult
+*.coverage
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Node modules (if using React Native or Node scripts)
+node_modules/
+
+# Android NDK build folder
+.cxx/

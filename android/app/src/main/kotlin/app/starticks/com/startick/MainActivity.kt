@@ -1,4 +1,4 @@
-package app.starticks.com.startick
+package app.startick
 
 import io.flutter.embedding.android.FlutterActivity
 

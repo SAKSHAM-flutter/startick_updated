@@ -4,6 +4,7 @@ import 'package:startick/data/local/shared_pref.dart';
 import 'package:startick/data/remote/repo/auth_repo.dart';
 import 'package:startick/ui/screens/ticket_scanning/ticket_scan_model.dart';
 import 'package:startick/ui/themes/typography.dart';
+import 'package:startick/ui/utils/colors_helpers.dart';
 import 'package:startick/ui/utils/widgets/custom_image.dart';
 
 class CheckOutSuccess extends StatelessWidget {
@@ -17,13 +18,7 @@ class CheckOutSuccess extends StatelessWidget {
       elevation: 0,
       color: const Color(0xFF19396b),
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [Color(0xFFC62EEC), Color(0xFF26CFD0)],
-          ),
-        ),
+        decoration: BoxDecoration(gradient: appGradient),
         child: Column(
           children: [
             const SizedBox(height: 40),

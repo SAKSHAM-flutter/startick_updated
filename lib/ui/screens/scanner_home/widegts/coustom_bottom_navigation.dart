@@ -43,16 +43,16 @@ class CustomBottomNavBar extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            if (index == selectedIndex)
-              Container(
-                width: 70,
-                height: 80,
-                margin: const EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                  color: AppColors.focusColor.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-              ),
+            // if (index == selectedIndex)
+            //   Container(
+            //     width: 70,
+            //     height: 80,
+            //     margin: const EdgeInsets.symmetric(vertical: 10),
+            //     decoration: BoxDecoration(
+            //       color: AppColors.focusColor,
+            //       borderRadius: BorderRadius.circular(5),
+            //     ),
+            //   ),
             Positioned(
               bottom: 32,
               child: CustomImage(

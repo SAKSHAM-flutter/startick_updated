@@ -5,6 +5,7 @@ import 'package:startick/ui/screens/ticket_scanning/widgets/ticket_detail_widget
 import 'package:startick/ui/screens/widgets/back_button.dart';
 import 'package:startick/ui/themes/colors.dart';
 import 'package:startick/ui/themes/typography.dart';
+import 'package:startick/ui/utils/colors_helpers.dart';
 import 'package:startick/ui/utils/widgets/custom_image.dart';
 
 class TicketDetail extends StatelessWidget {
@@ -29,16 +30,7 @@ class TicketDetail extends StatelessWidget {
               child: Container(
                 height: 260,
                 width: size.width,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      Color(0xFFC62EEC),
-                      Color(0xFF26CFD0),
-                    ],
-                  ),
-                ),
+                decoration: BoxDecoration(gradient: appGradient),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

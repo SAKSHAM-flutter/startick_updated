@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:startick/ui/screens/help/widgets/help_button.dart';
 import 'package:startick/ui/screens/widgets/back_button.dart';
+import 'package:startick/ui/themes/colors.dart';
 import 'package:startick/ui/themes/typography.dart';
+import 'package:startick/ui/utils/colors_helpers.dart';
 
 class HelpScreen extends StatelessWidget {
   static const String route = "/HelpScreen";
@@ -13,16 +15,7 @@ class HelpScreen extends StatelessWidget {
     SizedBox sizedBox = const SizedBox(height: 20);
     return SafeArea(
       child: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFFC62EEC),
-              Color(0xFF26CFD0),
-            ],
-          ),
-        ),
+        decoration: BoxDecoration(gradient: appGradient),
         child: Scaffold(
           // backgroundColor: const Color(0xFF18326c),
           backgroundColor: Colors.transparent,
