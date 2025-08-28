@@ -7,6 +7,7 @@ import 'package:startick/ui/screens/auth/widgets/login_card_widget.dart';
 import 'package:startick/ui/utils/base_class/base_screen.dart';
 import 'package:startick/ui/utils/base_class/navigation.dart';
 import 'package:startick/ui/utils/base_class/view_model.dart';
+import 'package:startick/ui/utils/widgets/custom_image.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String route = "loginScreen";
@@ -53,6 +54,10 @@ class _LoginScreenState extends State<LoginScreen> {
       backClick: true,
       child: Scaffold(
         resizeToAvoidBottomInset: true,
+        bottomSheet: CustomImage(
+          source: 'assets/bottom_img.png',
+          width: MediaQuery.sizeOf(context).width,
+        ),
         body: SingleChildScrollView(
           physics: isKeyBoardOpen
               ? const BouncingScrollPhysics()

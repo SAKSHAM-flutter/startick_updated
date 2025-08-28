@@ -36,10 +36,11 @@ class WrongQrScan extends StatelessWidget {
                     "Please Check Again",
                     style: Inter.semiBold(Colors.white).s22,
                   ),
-                  Text(
-                    "You can't go",
-                    style: Inter.regular(Colors.white).s18,
-                  ),
+                  if (!isCoupon)
+                    Text(
+                      "You can't go",
+                      style: Inter.regular(Colors.white).s18,
+                    ),
                   const SizedBox(height: 10),
                   Text(
                     "Make sure you have a right ${isCoupon ? "Coupon" : "Ticket"}",

@@ -15,6 +15,7 @@ import 'package:startick/ui/utils/base_class/navigation.dart';
 import 'package:startick/ui/utils/base_class/view_model.dart';
 import 'package:startick/ui/utils/toasts.dart';
 import 'package:startick/ui/utils/widgets/common_button.dart';
+import 'package:startick/ui/utils/widgets/custom_image.dart';
 
 class OtpScreen extends StatefulWidget {
   static const String route = "otpScreen";
@@ -83,6 +84,10 @@ class _OtpScreenState extends State<OtpScreen> {
       backClick: true,
       child: Scaffold(
         resizeToAvoidBottomInset: true,
+        bottomSheet: CustomImage(
+          source: 'assets/bottom_img.png',
+          width: MediaQuery.sizeOf(context).width,
+        ),
         body: SingleChildScrollView(
           physics: isKeyBoardOpen
               ? const BouncingScrollPhysics()

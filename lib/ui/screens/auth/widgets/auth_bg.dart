@@ -10,10 +10,10 @@ class AuthBGWidget extends StatelessWidget {
 
   const AuthBGWidget({super.key, required this.text});
 
-  double _getBottomSafePadding(BuildContext context) {
-    final padding = MediaQuery.of(context).viewPadding.bottom;
-    return padding > 0 ? padding : 30.0;
-  }
+  // double _getBottomSafePadding(BuildContext context) {
+  //   final padding = MediaQuery.of(context).viewPadding.bottom;
+  //   return padding > 0 ? padding : 50.0;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -21,28 +21,28 @@ class AuthBGWidget extends StatelessWidget {
     return Stack(
       children: [
         SizedBox(width: size.width, height: size.height),
-        Positioned(
-          bottom: 0,
-          left: 0,
-          right: 0,
-          child: Container(
-            height: size.height,
-            width: size.width,
-            padding: EdgeInsets.only(bottom: _getBottomSafePadding(context)),
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-              image: DecorationImage(
-                image: AssetImage('assets/auth_back.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            alignment: Alignment.bottomCenter,
-            child: CustomImage(
-              source: 'assets/bottom_img.png',
-              width: MediaQuery.sizeOf(context).width,
-            ),
-          ),
-        ),
+        // Positioned(
+        //   bottom: 0,
+        //   left: 0,
+        //   right: 0,
+        //   child: Container(
+        //     height: size.height,
+        //     width: size.width,
+        //     padding: EdgeInsets.only(bottom: _getBottomSafePadding(context)),
+        //     decoration: const BoxDecoration(
+        //       color: Colors.transparent,
+        //       image: DecorationImage(
+        //         image: AssetImage('assets/auth_back.png'),
+        //         fit: BoxFit.cover,
+        //       ),
+        //     ),
+        //     alignment: Alignment.bottomCenter,
+        //     child: CustomImage(
+        //       source: 'assets/bottom_img.png',
+        //       width: MediaQuery.sizeOf(context).width,
+        //     ),
+        //   ),
+        // ),
         Container(
           width: size.width,
           height: size.height * 0.3,

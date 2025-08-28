@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:startick/ui/screens/auth/auth_viewmodel.dart';
-import 'package:startick/ui/screens/auth/forget_password.dart';
 import 'package:startick/ui/screens/auth/login.dart';
 import 'package:startick/ui/screens/auth/otp_screen.dart';
 import 'package:startick/ui/screens/event_detail/event_detail.dart';
@@ -31,10 +30,10 @@ class RouteHelper {
             create: (_) => AuthViewModel(),
             child: const OtpScreen(),
           ),
-      ForgotPassword.route: (_) => ChangeNotifierProvider(
-            create: (_) => AuthViewModel(),
-            child: const ForgotPassword(),
-          ),
+      // ForgotPassword.route: (_) => ChangeNotifierProvider(
+      //       create: (_) => AuthViewModel(),
+      //       child: const ForgotPassword(),
+      //     ),
       HomeScreen.route: (_) => ChangeNotifierProvider(
             create: (_) => HomeViewModel(),
             child: const HomeScreen(),
