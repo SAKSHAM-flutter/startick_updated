@@ -58,6 +58,7 @@ class _OtpScreenState extends State<OtpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //Added for pin input
     double topHeight = MediaQuery.sizeOf(context).height;
     final provider = context.read<AuthViewModel>();
     bool isKeyBoardOpen = MediaQuery.of(context).viewInsets.bottom > 0;

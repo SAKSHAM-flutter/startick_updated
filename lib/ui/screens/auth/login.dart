@@ -48,6 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    //
     double topHeight = MediaQuery.sizeOf(context).height;
     bool isKeyBoardOpen = MediaQuery.of(context).viewInsets.bottom > 0;
     return ScreenBase<AuthViewModel>(
