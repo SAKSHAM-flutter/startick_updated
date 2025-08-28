@@ -84,7 +84,7 @@ class _OtpScreenState extends State<OtpScreen> {
       backClick: true,
       child: Scaffold(
         resizeToAvoidBottomInset: true,
-        bottomSheet: CustomImage(
+        bottomNavigationBar: CustomImage(
           source: 'assets/bottom_img.png',
           width: MediaQuery.sizeOf(context).width,
         ),
